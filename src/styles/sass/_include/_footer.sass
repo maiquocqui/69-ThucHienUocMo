@@ -1,0 +1,56 @@
+footer
+	background: $blue
+	padding: 170px 0px 100px
+	font-family: 'saira'
+	.col-custom
+		width: 20%
+		padding: 0px 10px
+		+media-breakpoint-down(md)
+			width: 33.33%
+		+media-breakpoint-down(sm)
+			width: 50%
+	.footer-col
+		margin-bottom: 20px
+	.logo
+		filter: grayscale(100%) brightness(300%)
+		margin-bottom: 20px
+		img
+			height: 60px
+	.copyright
+		font-family: 'saira'
+		color: $white
+		opacity: 0.5
+		+fs(12rem)
+		margin-bottom: 20px
+	.social
+		a 
+			display: inline-block
+			+fs(18rem)
+			color: $white
+			opacity: 0.5
+			&:hover
+				opacity: 1
+			+ a  
+				margin-left: 20px
+	.title
+		+fs(15rem)
+		font-weight: 600
+		color: $white
+		text-transform: uppercase
+		margin-bottom: 15px
+	.footerlink
+		ul 
+			li  
+				a  
+					+fs(13rem)
+					color: $white
+					opacity: 0.5
+					&:hover
+						opacity: 1
+
+.up 
+	+fs(28rem)
+	color: $white
+	+pos(fix, null 20px 20px null)
+	z-index: 5
+	line-height: 1

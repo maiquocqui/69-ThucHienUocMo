@@ -1,0 +1,532 @@
+.home-title
+	+fs(34rem)
+	text-align: center
+	text-transform: uppercase
+	color: $blue
+	margin-bottom: 25px
+	&:after
+		content: ''
+		display: block
+		width: 70px
+		height: 1px
+		background: $red
+		margin: 15px auto 0
+.home-des
+	width: 55%
+	margin: 0 auto 40px
+	color: $main
+	+media-breakpoint-down(lg)
+		width: 80%
+	+media-breakpoint-down(md)
+		width: 100%
+.home-step
+	padding: 50px 0 100px
+	.step-list
+		.step-col
+			+media-breakpoint-down(md)
+				margin-bottom: 20px
+			&:nth-child(1)
+				.step
+					&:before
+						display: none
+			&:nth-child(2)
+				.step
+					background: #357ab6
+					&:after
+						border-left-color: #357ab6
+			&:nth-child(3)
+				.step
+					background: #0057a2
+					&:after
+						border-left-color: #0057a2
+			&:nth-child(4)
+				.step
+					background: darken(#0057a2,10%)
+					&:after
+						border: none
+			&.active
+				.step 
+					background: $red
+					.btn-wrap
+						visibility: visible
+						opacity: 1
+			.step
+				color: $white
+				text-align: center
+				height: 100%
+				padding: 20px
+				background: #77a6cf
+				+pos(rel,null)
+				+media-breakpoint-down(lg)
+					padding: 15px
+				&:before
+					content: ''
+					display: block
+					+pos(abs, 25px null null 0)
+					width: 0
+					height: 0
+					border: 10px solid transparent
+					border-left-color: $white
+				&:after
+					content: ''
+					display: block
+					+pos(abs, 25px -10px null null)
+					width: 0
+					height: 0
+					border: 10px solid transparent
+					border-right: none
+					border-left-color: #77a6cf
+				.number
+					+fs(36rem)
+					font-family: 'saira'
+					// margin-bottom: 5px
+					line-height: 1
+					font-weight: 700
+					+media-breakpoint-down(lg)
+						+fs(32rem)
+				.name
+					+fs(18rem)
+					font-weight: 600
+					text-transform: uppercase
+					+media-breakpoint-down(lg)
+						+fs(16rem)
+				time
+					display: block
+					+fs(14rem)
+					font-style: italic
+					margin-bottom: 20px
+					opacity: 0.65
+				.icon
+					+flexbox
+					width: 80px
+					height: 80px
+					margin: 0 auto 20px
+				.des
+					+fs(15rem)
+					margin-bottom: 5px
+					+media-breakpoint-down(lg)
+						+fs(14rem)
+				.btn-wrap 
+					+pos(abs, calc(100% + 1px) 0 null 0)
+					background: $red
+					padding: 0px 30px
+					color: $white
+					+flexbox
+					visibility: hidden
+					opacity: 0
+					+media-breakpoint-down(lg)
+						padding: 0px 15px
+					.label, .viewnow
+						width: 50%
+						font-family: 'saira'
+						text-transform: uppercase
+						display: block
+						line-height: 40px
+						+media-breakpoint-down(lg)
+							+fs(13rem)
+						
+					.viewnow
+						text-align: right
+						color: $white
+						+pos(rel,null)
+						&:before
+							content: '\f105'
+							+pos(abs, 0 null null 10px)
+
+.home-intro
+	margin: 0px -50px
+	+media-breakpoint-down(md)
+		margin: 0
+	figure 
+		+flexbox
+		flex-wrap: wrap
+		.intro-img
+			width: 66.66%
+			order: 2
+			+media-breakpoint-down(md)
+				width: 100%
+			img
+				width: 100%
+		figcaption
+			width: 33.33%
+			order: 1
+			padding: 65px 35px
+			background: $pink url(../img/introbg.jpg) right bottom no-repeat
+			color: $white
+			font-family: 'saira'
+			text-shadow: 1px 1px 1px color-rgba($black,0.3)
+			+pos(rel,null)
+			+media-breakpoint-down(md)
+				width: 100%
+			.title
+				+fs(24rem)
+				font-weight: 600
+				margin-bottom: 30px
+			.des
+				+fs(22rem)
+				font-weight: 200
+				+media-breakpoint-down(md)
+					margin-bottom: 20px
+			.link
+				font-weight: 500
+				+fs(13rem)
+				color: $white
+				letter-spacing: 1px
+				+pos(abs, null 35px 20px 35px)
+				z-index: 5
+				text-transform: uppercase
+				+media-breakpoint-down(md)
+					+pos(rel,unset)
+					left: unset
+					bottom: unset
+					right: unset
+					display: inline-block
+				&:after
+					content: '\f061'
+					font-family: 'fontawesome'
+					+pos(abs, 0 0 null null)
+					font-weight: normal
+					+media-breakpoint-down(md)
+						+pos(static,unset)
+						margin-left: 10px
+.home-news
+	+pos(rel,null)
+	padding: 50px 0 0
+	&:before
+		content: ''
+		display: block
+		background: $blue
+		+pos(abs, -90px 0 null 0)
+		height: 400px
+		z-index: -1
+		+transform(perspective(1))
+	.home-title
+		color: $white
+	.news-list
+	.news-col
+		height: 100%
+		+pos(rel,null)
+		padding: 15px
+		background: $white
+		padding-bottom: 90px
+		border-bottom: 10px solid darken($white,10%)
+		time 
+			display: block
+			width: 64px
+			height: 64px
+			+flexbox
+			flex-wrap: wrap
+			justify-content: center
+			align-items: center
+			align-content: center
+			font-family: 'saira'
+			text-align: center
+			margin-bottom: 10px
+			background: darken($white,5%)
+			color: $blue
+			.date
+				+fs(30rem)
+				font-weight: 700
+				width: 100%
+				line-height: 1.2
+			.month
+				+fs(12rem)
+				font-weight: 700
+				width: 100%
+				line-height: 1.2
+		.news-name
+			+fs(24rem)
+			font-weight: 500
+			margin-left: 15px
+			margin-bottom: 10px
+			a 
+				color: $blue
+				&:hover
+					color: $red
+		.news-des
+			color: $main
+			margin-left: 15px
+			+fs(14rem)
+		.link
+			display: block
+			+pos(abs, null 30px 30px 30px)
+			color: $blue
+			font-weight: 600
+			+fs(13rem)
+			font-family: 'saira'
+			text-transform: uppercase
+			&:hover
+				letter-spacing: 1px
+				color: $red
+			&:after
+				content: '\f061'
+				margin-left: 5px
+				+pos(abs, 0 0 null null)
+				font-weight: normal
+				+fs(12rem)
+.home-develop
+	padding: 50px 0 0
+	.row
+		margin: 0px -10px
+	.col-12
+		padding: 0px 10px
+	article
+		margin-bottom: 20px
+	.news-col
+		height: 100%
+		figure 
+			.news-img
+				display: block
+			img 
+				width: 100%
+		&.col1
+			background: darken($white,60%)
+			figcaption
+				padding: 15px 20px
+				.news-name
+					+fs(17rem)
+					font-weight: 600
+					margin-bottom: 10px
+					line-height: 1.3
+					a 
+						color: $white
+				.news-des
+					+fs(13rem)
+					color: $white
+		&.col2
+			figure 
+				+pos(rel,null)
+				+media-breakpoint-down(lg)
+					height: 100%
+				.news-img
+					+media-breakpoint-down(lg)
+						height: 100%
+					img 
+						width: 100%
+						+media-breakpoint-down(lg)
+							height: 100%
+							object-fit: cover
+				figcaption
+					.news-name
+						display: block
+						+pos(abs, null 0 0 0)
+						background: color-rgba($black,0.5)
+						+fs(18rem)
+						a 
+							color: $white
+							display: block
+							padding: 10px 20px
+		&.col3
+			background: darken($white,5%)
+			figcaption
+				padding: 15px 20px
+				.news-name
+					+fs(17rem)
+					font-weight: 600
+					margin-bottom: 10px
+					line-height: 1.3
+					a 
+						color: $main
+				.news-des
+					+fs(13rem)
+					color: $main
+		&.col4
+			background: $blue
+			figcaption
+				padding: 15px 20px
+				.news-name
+					+fs(17rem)
+					font-weight: 600
+					margin-bottom: 10px
+					line-height: 1.3
+					a 
+						color: $white
+				.news-des
+					+fs(13rem)
+					color: $white
+
+.home-video
+	background: darken($white,5%)
+	padding: 10px 20px
+	height: calc(100% - 20px)
+	.sidebar-title
+		+fs(18rem)
+		font-family: 'saira'
+		text-transform: uppercase
+		margin-bottom: 15px
+		&:after
+			content: ''
+			display: block
+			width: 30px
+			height: 1px
+			background: $blue
+			margin-top: 5px
+	.video
+		margin-bottom: 5px
+		figure 
+			.video-img 
+				width: 100%
+				+pos(rel,null)
+				display: block
+				&:before
+					content: '\f01d'
+					+pos(abs, 0 null 0 0)
+					right: 0
+					+flexbox
+					justify-content: center
+					align-items: center
+					color: $white
+					background: color-rgba($black,0.35)
+					+fs(52rem)
+				img
+					width: 100%
+			figcaption
+				padding: 10px 0
+				.video-name
+					+fs(16rem)
+					font-weight: 500
+					a
+						color: $main
+						&:hover
+							color: $blue
+	.btn-viewmore
+		display: block
+		+pos(rel,null)
+		+fs(13rem)
+		font-weight: 600
+		padding: 10px 0
+		color: $blue
+		font-family: 'saira'
+		text-transform: uppercase
+		border-top: 1px solid darken($white,10%)
+		+media-breakpoint-down(md)
+			margin-bottom: 15px
+		&:after
+			content: '\f061'
+			+pos(abs, 10px 0 null null)
+			font-weight: normal
+			+fs(12rem)
+			+media-breakpoint-down(md)
+				+pos(static,unset)
+				margin-left: 10px
+				line-height: 1
+
+.home-social
+	padding: 50px 0px 50px
+	.social-slide
+		margin: 0px -10px
+		.slick-prev, .slick-next
+			+pos(abs, 50% null null null)
+			+transform(translateY(-50%))
+			+fs(0)
+			z-index: 5
+			opacity: 0.3
+			&:hover
+				opacity: 1
+			&:before
+				content: ''
+				+fs(36rem)
+		.slick-prev
+			left: -20px
+			&:before
+				content: '\f104'
+		.slick-next
+			right: -20px
+			&:before
+				content: '\f105'
+	.item
+		height: unset
+		padding: 0px 10px
+	.slick-track
+		+flexbox
+	.social-col
+		padding-bottom: 80px
+		height: 100%
+		+pos(rel,null)
+		border: 1px solid darken($white,20%)
+		figure 
+			.social-img 
+				display: block
+				img
+					width: 100%
+			figcaption
+				padding: 20px
+				.des
+					+fs(14rem)
+				.fb-info
+					+pos(abs, null 20px 20px 20px)
+					.info
+						+pos(rel,null)
+						padding-left: 60px
+						.avt
+							display: block
+							width: 48px
+							height: 48px
+							border: 1px solid darken($white,20%)
+							+pos(abs, 0 null null 0)
+						.name
+							+fs(14rem)
+							display: block
+							color: $main
+						time 
+							display: block
+							+fs(14rem)
+							color: darken($white,40%)
+					.link
+						display: block
+						+bor-rad(3px)
+						background: $facebook
+						+fs(18rem)
+						color: $white
+						+pos(abs, 4px 0 null null)
+						width: 40px
+						height: 40px
+						text-align: center
+						line-height: 38px
+						border: 1px solid $facebook
+						&:hover
+							background: none
+							color: $facebook
+.home-partner
+	padding: 60px 0 0
+	background: darken($white,5%)
+	.title
+		+fs(18rem)
+		font-weight: 600
+		height: 48px
+		margin-bottom: 10px
+		text-transform: uppercase
+	.partner
+		+flexbox
+		height: 100px
+		background: $white
+		justify-content: center
+		align-items: center
+		margin-bottom: 20px
+	.university-logo
+		+flexbox
+		justify-content: center
+		align-items: center
+		background: #8e0031
+		height: 220px
+		img
+			filter: invert(100%) grayscale(100%) brightness(400%)
+	.intro2
+		margin: 30px -50px -120px
+		+pos(rel,null)
+		img
+			+media-breakpoint-down(sm)
+				height: 200px
+				object-fit: cover
+		.caption
+			font-family: 'saira'
+			color: $white
+			// line-height: 1
+			+pos(abs, 30px 0 null 0)
+			text-shadow: 1px 1px 1px color-rgba($black,0.3)
+			.intro-title
+				+fs(24rem)
+				font-weight: 700
+			.des
+				+fs(22rem)
+				font-weight: 200
